@@ -40,7 +40,9 @@ len(approved_loans)
 ```
 
 ### Interpretation:
-This solution uses boolean indexing to filter the DataFrame. `df['action'] == 1` creates a boolean mask, selecting only rows where the 'action' column equals 1. The `len()` function then counts the resulting rows. An alternative, more concise approach would be `len(df[df['action'] == 1])` or `df[df['action'] == 1].shape[0]`.
+This solution uses boolean indexing to filter the DataFrame. `df['action'] == 1` creates a boolean mask, selecting only rows where the 'action' column equals 1. 
+df[ ... ] is a filtering operation (or logical indexing). A condition (or Boolean mask) is passed in square brackets. The result is a new DataFrame that contains only those rows from the original df for which the condition (df['action'] == 1) was True.
+The `len()` function then counts the resulting rows. An alternative, more concise approach would be `len(df[df['action'] == 1])` or `df[df['action'] == 1].shape[0]`.
 
 ---
 
@@ -52,7 +54,7 @@ df['loanamt'].min()
 ```
 
 ### Interpretation:
-The `.min()` method efficiently calculates the minimum value in a specific Series (column). This is useful for identifying the smallest loan amount in the dataset, which helps understand the range of loan sizes.
+The `.min()` method efficiently calculates the minimum value in a specific Series (column).
 
 ---
 
@@ -64,7 +66,7 @@ df['loanamt'].mean()
 ```
 
 ### Interpretation:
-The `.mean()` method computes the arithmetic mean of the values in the 'loanamt' column. This central tendency measure gives an idea of the typical loan application amount.
+The `.mean()` method computes the arithmetic mean of the values in the 'loanamt' column.
 
 ---
 
@@ -129,3 +131,4 @@ IQR
 ### Interpretation:
 
 The Interquartile Range (IQR) is a measure of statistical dispersion, representing the middle 50% of the data. It is calculated as the difference between the 75th percentile (Q3) and the 25th percentile (Q1). The IQR is robust to outliers and helps understand the spread of the central portion of the loan amount distribution.
+
