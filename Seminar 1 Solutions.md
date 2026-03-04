@@ -1,6 +1,6 @@
 <div style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 16pt; font-weight: bold">
   
-## Seminar#1<br>Tasks solutions 
+# Seminar #2<br>Tasks solutions 
 </div>
 
 <div style="font-family: 'Times New Roman', Times, serif; font-size: 12pt; text-align: left">
@@ -127,4 +127,5 @@ IQR
 ```
 
 ### Interpretation:
+
 The Interquartile Range (IQR) is a measure of statistical dispersion, representing the middle 50% of the data. It is calculated as the difference between the 75th percentile (Q3) and the 25th percentile (Q1). The IQR is robust to outliers and helps understand the spread of the central portion of the loan amount distribution.
