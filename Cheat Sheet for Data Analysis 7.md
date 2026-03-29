@@ -173,26 +173,6 @@ plt.show()
 ```
 *Meaning:* Comprehensive comparison of simple and log returns across multiple dimensions
 
----
-
-## Advanced Financial Analysis
-
-### Calculate moving averages
-```python
-data['MA_50'] = prices.rolling(window=50).mean()
-data['MA_200'] = prices.rolling(window=200).mean()
-
-plt.figure(figsize=(10, 6))
-plt.plot(data.index, prices, label='Close')
-plt.plot(data.index, data['MA_50'], label='50-day MA', linewidth=2)
-plt.plot(data.index, data['MA_200'], label='200-day MA', linewidth=2)
-plt.title('Price with Moving Averages')
-plt.legend()
-plt.grid(True, alpha=0.3)
-plt.show()
-```
-*Meaning:* Moving averages smooth price data to identify trends; crossovers often used as trading signals
-
 ### Calculate volatility
 ```python
 # 30-day rolling volatility
