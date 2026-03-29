@@ -1,6 +1,6 @@
 <div style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 16pt; font-weight: bold">
   
-# Seminar #1<br>Tasks solutions 
+# Seminar 1 solutions 
 </div>
 
 <div style="font-family: 'Times New Roman', Times, serif; font-size: 12pt; text-align: left">
