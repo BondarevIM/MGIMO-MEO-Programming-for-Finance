@@ -376,6 +376,7 @@ for ticker in tickers:
    *Meaning:* Drawdowns measure the decline from a peak to a trough; critical for understanding downside risk
 
 Remember: When comparing multiple stocks, always consider both **absolute performance** (raw price changes) and **relative performance** (normalized returns). The most expensive stock isn't necessarily the best performer, and volatility should be considered alongside returns when evaluating investment opportunities.
+
 ---
 
 ## Practical Tips for Financial Data Analysis
