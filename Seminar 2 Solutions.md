@@ -15,7 +15,7 @@ correlation
 **Correct answer: 0.43**
 
 ### Commentary
-This solution calculates the Pearson correlation coefficient between loan amount and applicant income. The `.corr()` method in pandas computes the standard correlation coefficient, which measures the strength and direction of the linear relationship between two numerical variables. A correlation of 0.43 indicates a moderate positive relationship - as applicant income increases, loan amount tends to increase as well, but not perfectly. This makes logical sense in lending contexts, as higher-income applicants typically qualify for larger loans. The value falls between 0.3 and 0.7, which is generally considered a moderate correlation in social science research. Note that correlation does not imply causation - we cannot say that higher income causes larger loans, only that they tend to occur together.
+This solution calculates the Pearson correlation coefficient between loan amount and applicant income. The `.corr()` method in pandas computes the standard correlation coefficient, which measures the strength and direction of the linear relationship between two numerical variables. A correlation of 0.43 indicates a moderate positive relationship - as applicant income increases, loan amount tends to increase as well, but not perfectly. This makes logical sense in lending contexts, as higher-income applicants typically qualify for larger loans. Note that correlation does not imply causation - we cannot say that higher income causes larger loans, only that they tend to occur together.
 
 ## Task 2: Calculate the average 'loanamt' for each 'occ' category (occupation). Which occupation has the highest average?
 
@@ -57,7 +57,7 @@ most_common_action
 **Correct answer: 1**
 
 ### Commentary
-This solution first uses `value_counts()` to count occurrences of each application status, then creates a bar chart using seaborn's `countplot()`. The `value_counts()` method efficiently tabulates how many times each value appears in the 'action' column. The resulting visualization clearly shows the frequency distribution of loan outcomes. The fact that action code 1 (approved) occurs more frequently than code 3 (rejected) suggests that the lending institution has a relatively high approval rate. This could indicate either lenient lending standards, a pool of highly qualified applicants, or potentially that the dataset was selectively sampled to include more approved applications. Understanding the baseline approval rate is crucial for evaluating model performance in classification tasks.
+This solution first uses `value_counts()` to count occurrences of each application status, then creates a bar chart using seaborn's `countplot()`. The `value_counts()` method efficiently tabulates how many times each value appears in the 'action' column. The resulting visualization clearly shows the frequency distribution of loan outcomes. The fact that action code 1 (approved) occurs more frequently than code 3 (rejected) suggests that the lending institution has a relatively high approval rate.
 
 ## Task 5: Plot a histogram for the variable 'appinc' (applicant's income). What conclusion can be drawn about the income distribution?
 
@@ -89,7 +89,7 @@ plt.show()
 **Correct answer: no**
 
 ### Commentary
-The scatter plot visualizes the relationship between job tenure and loan amount. The absence of a clear linear pattern indicates that the relationship is not linear. This could manifest in several ways: the points might form a curved pattern, show no discernible pattern at all, or display different relationships in different segments of the data. In lending contexts, this often means that job tenure alone isn't a strong predictor of loan amount - other factors like income, credit history, or loan purpose likely play more significant roles. The non-linear relationship suggests that if we were building a predictive model, we might need to consider polynomial terms, interaction effects, or non-linear modeling techniques rather than a simple linear regression.
+The scatter plot visualizes the relationship between job tenure and loan amount. The absence of a clear linear pattern indicates that the relationship is not linear. This could manifest in several ways: the points might form a curved pattern, show no discernible pattern at all, or display different relationships in different segments of the data. The non-linear relationship suggests that if we were building a predictive model, we might need to consider polynomial terms, interaction effects, or non-linear modeling techniques rather than a simple linear regression.
 
 ## Task 7: Plot a bar plot of the average 'loanamt' over 'occ'. Which 'occ' category is at the top? (See the results from previous tasks)
 
@@ -139,7 +139,7 @@ plt.show()
 **Correct answer: 3**
 
 ### Commentary
-The box plot compares the distribution of obligations-to-income ratio (obrat) between approved and rejected loan applications. The median obrat is higher for rejected applications (action code 3), which makes logical sense - a higher obligations-to-income ratio indicates that a larger portion of the applicant's income would go toward debt payments, representing higher credit risk. Lenders typically prefer lower obrat values (often below 40-50%), as they suggest the applicant has sufficient income to service the new loan. This pattern validates the lending institution's decision-making process, showing they're appropriately considering debt burden in their approval decisions. The box plot also reveals the spread and potential outliers within each group, providing a more complete picture than just the median.
+The box plot compares the distribution of obligations-to-income ratio (obrat) between approved and rejected loan applications. The median obrat is higher for rejected applications (action code 3), which makes logical sense - a higher obligations-to-income ratio indicates that a larger portion of the applicant's income would go toward debt payments, representing higher credit risk. The box plot also reveals the spread and potential outliers within each group, providing a more complete picture than just the median.
 
 ## Task 10: Plot a stacked bar chart showing the distribution of marital status ('married': 0 - single, 1 - married) by gender ('male': 0 - female, 1 - male). Which segment (married/single) predominates among men?
 
@@ -161,4 +161,4 @@ plt.show()
 **Correct answer: married**
 
 ### Commentary
-The stacked bar chart visualizes the relationship between gender and marital status using a contingency table created with `pd.crosstab()`. Among men (gender code 1), the "married" segment predominates, indicating that married men outnumber single men in the dataset. This could reflect demographic patterns in the population from which the sample was drawn, or potentially indicate that married men are more likely to apply for loans (perhaps for family-related expenses). Understanding demographic patterns in loan applications is important for fair lending practices and for identifying potential biases in the application or approval process. The stacked bar format effectively shows both the total count by gender and the proportion married within each gender group.
+The stacked bar chart visualizes the relationship between gender and marital status using a contingency table created with `pd.crosstab()`. Among men (gender code 1), the "married" segment predominates, indicating that married men outnumber single men in the dataset. This could reflect demographic patterns in the population from which the sample was drawn, or potentially indicate that married men are more likely to apply for loans (perhaps for family-related expenses).
